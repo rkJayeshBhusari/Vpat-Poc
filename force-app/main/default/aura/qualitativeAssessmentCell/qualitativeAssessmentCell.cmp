@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:attribute name="label" type="String"/>
+
+    <td style="text-align:center;">{!v.label}</td>
+</aura:component>

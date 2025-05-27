@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="categories" type="List" default="['Legal', 'Brand and Reputation', 'Financial']"/>
+    <aura:attribute name="ratings" type="List" default="['High', 'Medium', 'Low']"/>
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr>
+                <th colspan="3" style="text-align:left;">Impact Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.categories}" var="category">
+                <c:qualitativeAssessmentRow category="{!category}" ratings="{!v.ratings}" />
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

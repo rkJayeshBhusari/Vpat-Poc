@@ -1,0 +1,13 @@
+<aura:component>
+    <aura:attribute name="category" type="String"/>
+    <aura:attribute name="ratings" type="List"/>
+
+    <tr>
+        <td colspan="3"><b>{!v.category}</b></td>
+    </tr>
+    <tr>
+        <aura:iteration items="{!v.ratings}" var="rating">
+            <c:qualitativeAssessmentCell label="{!rating}" />
+        </aura:iteration>
+    </tr>
+</aura:component>
